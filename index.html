@@ -1,30 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Registro Diário</title>
   <style>
-    body { font-family: Arial; background: #f3f3f3; padding: 40px; }
-    form { background: white; padding: 30px; border-radius: 12px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    label { display: block; margin-top: 15px; font-weight: bold; }
-    input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 8px; }
-    button { margin-top: 20px; padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; }
-    button:hover { background: #0056b3; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 40px;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
   </style>
 </head>
 <body>
   <form action="https://script.google.com/macros/s/AKfycbyo6nWlmb71up8hBb4f7LWkxtYIYYpAinq8C_7XJD7qhqkgGamPd5wnDhH4gibKNJwr/exec" method="POST">
     <h2>Registro Diário de Resultados</h2>
-    <label>Responsável</label><input name="responsavel" required>
-    <label>Previsão de Fechamentos</label><input name="previsao" type="number">
-    <label>Leads Cadastrados</label><input name="leads" type="number">
-    <label>Orçamentos Enviados</label><input name="orcamentos" type="number">
-    <label>Propostas Fechadas</label><input name="propostas" type="number">
-    <label>Negócios Ganhos</label><input name="ganhos" type="number">
-    <label>Meta Diária</label><input name="meta_dia">
-    <label>Total Acumulado no Mês</label><input name="total_mes">
-    <label>% da Meta Mensal</label><input name="porcentagem_meta">
+
+    <label>Meu nome:</label>
+    <input name="nome" required>
+
+    <label>Minha previsão de Ganhos do dia:</label>
+    <input name="previsao_ganhos" type="number" required>
+
+    <label>Minha previsão de Transmitidos do dia:</label>
+    <input name="previsao_transmitidos" type="number" required>
+
+    <label>Número de Leads Cadastrados:</label>
+    <input name="leads" type="number" required>
+
+    <label>Número de atividades do dia:</label>
+    <input name="atividades" type="number" required>
+
+    <label>Número de orçamentos Enviados:</label>
+    <input name="orcamentos" type="number" required>
+
+    <label>Número de Propostas Fechadas:</label>
+    <input name="propostas" type="number" required>
+
+    <label>Número de Negócios Ganhos:</label>
+    <input name="ganhos" type="number" required>
+
+    <label>Minha atual Conversão (Mês) RD:</label>
+    <input name="conv_rd" type="number" step="any" required>
+
+    <label>Minha atual Conversão (Mês) Renovação:</label>
+    <input name="conv_renov" type="number" step="any" required>
+
+    <label>Minha atual Conversão (Mês) Indicação:</label>
+    <input name="conv_indic" type="number" step="any" required>
+
+    <label>Minha atual Conversão (Mês) Multi:</label>
+    <input name="conv_multi" type="number" step="any" required>
+
+    <label>Minha % da Meta Individual já batida:</label>
+    <input name="meta" type="number" step="any" required>
+
     <button type="submit">Enviar Registro</button>
   </form>
 </body>
